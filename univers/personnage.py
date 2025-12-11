@@ -44,3 +44,15 @@ def afficher_personnage(joueur):
         print(f"Maison : {joueur['Maison']}")
     print("=" * 30 + "\n")
 
+def modifier_argent(joueur, montant):
+
+    joueur['Argent'] += montant
+
+
+def ajouter_object(joueur, cle, objet):
+
+    if cle in ["Inventaire", "Sortilèges"]:
+        joueur[cle].append(objet)
+    else:
+        print(f"Erreur : Clé '{cle}' invalide pour l'ajout d'objet.")
+
