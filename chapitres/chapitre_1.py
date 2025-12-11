@@ -65,7 +65,7 @@ def acheter_fournitures(personnage):
     print("\n--- LE CHEMIN DE TRAVERSE ---")
     print("Bienvenue sur le Chemin de Traverse !")
     
-    # Chargement de l'inventaire
+
     chemin_inventaire = os.path.join(os.path.dirname(__file__), "..", "data", "inventaire.json")
     donnees_inventaire = load_fichier(chemin_inventaire)
     
@@ -73,16 +73,14 @@ def acheter_fournitures(personnage):
         print("Erreur critique : Impossible de charger l'inventaire.")
         return
 
-    # Adaptation au nouveau format : "ID": ["Nom", Prix]
-    # On reconstruit un dictionnaire {Nom: Prix} pour la logique d'achat
     fournitures = {}
-    # Le fichier peut être une liste ou un dict selon le format exact, ici on gère le dict "1": [...]
+
     if isinstance(donnees_inventaire, dict):
         for key, val in donnees_inventaire.items():
             if isinstance(val, list) and len(val) >= 2:
                 fournitures[val[0]] = val[1]
     
-    # Animaux (absents du nouveau JSON, on les définit ici)
+
     animaux = {
         "Chouette": 20,
         "Chat": 15,
@@ -93,7 +91,7 @@ def acheter_fournitures(personnage):
     objets_obligatoires = ["Baguette magique", "Robe de sorcier", "Manuel de potions"]
     achats_effectues = []
     
-    # Achat des fournitures
+
     while True:
         restant = [obj for obj in objets_obligatoires if obj not in achats_effectues]
         if not restant:
@@ -130,7 +128,6 @@ def acheter_fournitures(personnage):
                      print("Poudlard ne peut pas vous accepter sans équipement. Fin du jeu.")
                      sys.exit(0)
 
-    # Achat de l'animal
     print("\nIl est temps de choisir votre animal de compagnie pour Poudlard !")
     print(f"Vous avez {personnage['Argent']} gallions.")
     print("Voici les animaux disponibles :")
