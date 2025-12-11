@@ -25,16 +25,16 @@ def lancer_choix_menu():
         choix = input("\nVotre choix : ").strip()
         
         if choix == "1":
-            # Chapitre 1
+
             joueur = lancer_chapitre_1()
             
-            # Chapitre 2
+
             lancer_chapitre_2(joueur)
             
-            # Chapitre 3
+
             lancer_chapitre_3(joueur, maisons)
             
-            # Chapitre 4
+
             lancer_chapitre4_quidditch(joueur, maisons)
             
         elif choix == "2":
