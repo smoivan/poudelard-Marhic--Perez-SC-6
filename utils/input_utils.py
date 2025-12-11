@@ -29,3 +29,27 @@ def demander_nombre(message, min_val=None, max_val=None):
             continue
 
         return nombre
+
+def demander_choix(message, options):
+    print(message)
+    for i, option in enumerate(options, 1):
+        print(f"{i}. {option}")
+
+    choix_idx = demander_nombre("Votre choix : ", 1, len(options))
+    return options[choix_idx - 1]
+
+
+def load_fichier(chemin_fichier):
+    if not os.path.exists(chemin_fichier):
+        print(f"Erreur : Le fichier {chemin_fichier} est introuvable.")
+        return None
+
+    try:
+        with open(chemin_fichier, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        print(f"Erreur : Impossible de décoder le fichier {chemin_fichier}.")
+        return None
+    except Exception as e:
+        print(f"Erreur lors de la lecture du fichier {chemin_fichier} : {e}")
+        return None
