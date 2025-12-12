@@ -5,9 +5,9 @@ import sys
 import os
 
 def introduction():
-    print("\n" + "*"*50)
+    print("\n")
     print("CHAPITRE 1 : L'ARRIVÉE DANS LE MONDE MAGIQUE")
-    print("*"*50)
+    print("\n")
     print("\nBienvenue, jeune sorcier(e). Votre aventure est sur le point de commencer.")
     input("Appuyez sur Entrée pour continuer...")
 
@@ -153,9 +153,9 @@ def lancer_chapitre_1():
     rencontrer_hagrid(joueur)
     acheter_fournitures(joueur)
     
-    print("\n" + "*"*50)
+    print("\n")
     print("Fin du Chapitre 1 ! Votre aventure commence à Poudlard...")
-    print("*"*50)
+    print("\n")
     input("Appuyez sur Entrée pour continuer...")
     
     return joueur

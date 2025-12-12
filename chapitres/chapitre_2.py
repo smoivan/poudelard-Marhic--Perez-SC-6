@@ -9,9 +9,9 @@ from univers.maison import repartition_maison
 from univers.personnage import afficher_personnage
 
 def rencontrer_amis(joueur):
-    print("\n" + "*"*50)
+
     print("Vous montez à bord du Poudlard Express. Le train démarre lentement en direction du Nord...")
-    print("*"*50)
+
     
 
     print("\nUn garçon roux entre dans votre compartiment, l'air amical.")
@@ -59,11 +59,11 @@ def rencontrer_amis(joueur):
     print(f"Tes attributs mis à jour : {joueur['Attributs']}")
 
 def mot_de_bienvenue():
-    print("\n" + "="*50)
+
     print("Vous arrivez enfin à Poudlard !")
     print("Le Professeur Dumbledore se lève pour son discours de bienvenue :")
     print("« Bienvenue à tous ! Que cette année soit riche en apprentissage et en magie ! »")
-    print("="*50 + "\n")
+    print("\n")
     input("Appuyez sur Entrée pour commencer la Répartition...")
 
 def ceremonie_repartition(joueur):
@@ -113,9 +113,9 @@ def lancer_chapitre_2(joueur):
     ceremonie_repartition(joueur)
     installation_salle_commune(joueur)
     
-    print("\n" + "*"*50)
+    print("\n")
     print("Fin du Chapitre 2 ! Les cours vont bientôt commencer...")
-    print("*"*50 + "\n")
+    print("\n")
     
     afficher_personnage(joueur)
     input("Appuyez sur Entrée pour continuer vers le Chapitre 3...")
