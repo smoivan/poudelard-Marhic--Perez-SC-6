@@ -1,8 +1,8 @@
 from utils.input_utils import demander_choix
 from chapitres.chapitre_1 import lancer_chapitre_1
 from chapitres.chapitre_2 import lancer_chapitre_2
-from chapitres.chapitre_3 import lancer_chapitre_3
-from chapitres.chapitre_4 import lancer_chapitre_4
+#from chapitres.chapitre_3 import lancer_chapitre_3
+#from chapitres.chapitre_4 import lancer_chapitre_4
 import sys
 
 def afficher_menu_principal():
