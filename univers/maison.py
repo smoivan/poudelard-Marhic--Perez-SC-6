@@ -31,7 +31,7 @@ def afficher_maison_gagnante(maisons):
 
 def repartition_maison(joueur, questions):
 
-    # 1. Initialisation des scores des maisons
+
     maisons_scores = {
         "Gryffondor": 0,
         "Serpentard": 0,
@@ -39,30 +39,30 @@ def repartition_maison(joueur, questions):
         "Serdaigle": 0
     }
 
-    # 2. Influence des attributs du joueur
+
     maisons_scores["Gryffondor"] += joueur.get("Attributs", {}).get("courage", 0) * 2
     maisons_scores["Serpentard"] += joueur.get("Attributs", {}).get("ambition", 0) * 2
     maisons_scores["Poufsouffle"] += joueur.get("Attributs", {}).get("loyauté", 0) * 2
     maisons_scores["Serdaigle"] += joueur.get("Attributs", {}).get("intelligence", 0) * 2
 
-    # 3. Influence des réponses au test
+
     for texte, choix, maisons_corresp in questions:
         print(texte)
         for i, option in enumerate(choix, start=1):
             print(f'{i}. {option}')
         
-        # Demander la réponse du joueur
+
         reponse = demander_nombre('Votre choix : ', 1, len(choix))
         
-        # Ajouter 3 points à la maison correspondante
+
         maison_choisie = maisons_corresp[reponse - 1]
         maisons_scores[maison_choisie] += 3
 
-    # 4. Déterminer la maison avec le score le plus élevé
+
     max_points = max(maisons_scores.values())
     maisons_gagnantes = [nom for nom, pts in maisons_scores.items() if pts == max_points]
 
-    # Gestion d'une éventuelle égalité : on choisit la première maison ex æquo
+
     maison_finale = maisons_gagnantes[0]  
     print(f'\nVous êtes réparti(e) dans la maison : {maison_finale} !')
     return maison_finale
