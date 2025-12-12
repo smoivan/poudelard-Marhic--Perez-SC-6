@@ -12,9 +12,9 @@ def initialiser_personnage(nom, prenom, attributs):
 
 
 def afficher_personnage(joueur):
-    print("\n" + "=" * 30)
+
     print("PROFIL DU PERSONNAGE")
-    print("=" * 30)
+
     print(f"Nom : {joueur['Nom']}")
     print(f"Prénom : {joueur['Prenom']}")
     print(f"Argent : {joueur['Argent']} gallions")
@@ -42,7 +42,7 @@ def afficher_personnage(joueur):
 
     if joueur.get("Maison"):
         print(f"Maison : {joueur['Maison']}")
-    print("=" * 30 + "\n")
+
 
 def modifier_argent(joueur, montant):
 
