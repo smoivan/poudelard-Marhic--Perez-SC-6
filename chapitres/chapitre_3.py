@@ -59,10 +59,10 @@ def quiz_magie(joueur, chemin_fichier=None):
         print("Erreur : Impossible de charger le quiz.")
         return 0
 
-    print("\n" + "=" * 50)
+    print("\n")
     print("Bienvenue au quiz de magie de Poudlard !")
     print("Réponds correctement aux 4 questions pour faire gagner des points à ta maison.")
-    print("=" * 50)
+
 
     questions_posees = []
     if len(questions_data) >= 4:
