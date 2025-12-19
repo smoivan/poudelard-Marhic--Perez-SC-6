@@ -35,7 +35,7 @@ def lancer_choix_menu():
             lancer_chapitre_3(joueur, maisons)
             
 
-            lancer_chapitre_4(joueur, maisons)
+            #lancer_chapitre_4(joueur, maisons)
             
         elif choix == "2":
             print("Au revoir et à bientôt dans le monde magique !")
