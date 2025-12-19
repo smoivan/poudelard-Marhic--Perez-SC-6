@@ -19,9 +19,9 @@ def apprendre_sorts(joueur, chemin_fichier=None):
         print("Erreur : Impossible de charger les sorts.")
         return
 
-    print("\n" + "*" * 50)
+    print("\n")
     print("Tu commences tes cours de magie à Poudlard...")
-    print("*" * 50)
+
 
     offensifs = [s for s in sorts_data if s['type'] == 'Offensif']
     defensifs = [s for s in sorts_data if s['type'] == 'Défensif']
