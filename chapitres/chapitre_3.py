@@ -97,7 +97,7 @@ def lancer_chapitre_3(joueur, maisons):
     afficher_maison_gagnante(maisons)
     afficher_personnage(joueur)
 
-    print("\n" +)
+    print("\n")
     print("Fin du Chapitre 3 ! Préparez-vous pour le Quidditch...")
     print("\n")
     input("Appuyez sur Entrée pour continuer vers le Chapitre 4...")
