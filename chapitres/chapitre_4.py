@@ -149,7 +149,7 @@ def match_quidditch(joueur, maisons):
     afficher_maison_gagnante(maisons)
 
 
-def lancer_chapitre4_quidditch(joueur, maisons):
+def lancer_chapitre4(joueur, maisons):
     match_quidditch(joueur, maisons)
 
     print("\n")
