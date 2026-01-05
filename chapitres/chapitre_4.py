@@ -11,23 +11,32 @@ from univers.maison import actualiser_points_maison, afficher_maison_gagnante
 
 
 def creer_equipe(maison, equipe_data, est_joueur=False, joueur=None):
+
+    if isinstance(equipe_data, dict):
+
+        joueurs_base = list(equipe_data.values())
+    else:
+
+        joueurs_base = list(equipe_data)
+
     equipe = {
         "nom": maison,
         "score": 0,
         "a_marque": 0,
         "a_stoppe": 0,
         "attrape_vifdor": False,
-        "joueurs": list(equipe_data)
+        "joueurs": joueurs_base
     }
 
     if est_joueur and joueur:
-
         nouveaux_joueurs = []
+
         nom_complet = f"{joueur['Prenom']} {joueur['Nom']} (Attrapeur)"
         nouveaux_joueurs.append(nom_complet)
 
-        if len(equipe_data) > 0:
-            nouveaux_joueurs.extend(equipe_data[1:])
+
+        if len(joueurs_base) > 0:
+            nouveaux_joueurs.extend(joueurs_base[1:])
 
         equipe["joueurs"] = nouveaux_joueurs
 
