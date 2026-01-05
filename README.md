@@ -38,36 +38,6 @@ Chapitre 3 – Les cours et la magie
 Chapitre 4 – La grande conclusion
 - Match de Quidditch
 
-
----------------------------------------------------------------------
-
-## 🗂️ Structure du projet
-
-poudelard/
-│
-├── main.py                  # Point d’entrée du jeu
-├── menu.py                  # Menu principal
-│
-├── univers/
-│   ├── personnage.py        # Gestion du joueur
-│   └── maison.py            # Gestion des maisons et des points
-│
-├── chapitres/
-│   ├── chapitre_1.py
-│   ├── chapitre_2.py
-│   ├── chapitre_3.py
-│   └── chapitre_4.py 
-│
-├── utils/
-│   └── input_utils.py       # Gestion des saisies utilisateur
-│
-└── data/
-    ├── maisons.json
-    ├── inventaire.json
-    ├── sorts.json
-    ├── quiz_magie.json
-    └── equipes_quidditch.json
-
 ---------------------------------------------------------------------
 
 ## ▶️ Lancer le jeu
